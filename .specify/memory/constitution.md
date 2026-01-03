@@ -1,55 +1,40 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# In-Memory Console-Based Todo Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Simplicity First
+Clean, minimal, understandable logic: Code must be readable, well-structured, and commented; Start simple, YAGNI principles applied throughout development.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Correctness and Reliability
+Core Todo operations must be correct and reliable: All CRUD operations for todos must work deterministically; Console interaction must be predictable and user-friendly.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Progressive Enhancement
+Features must be added progressively without breaking earlier phases: Each phase must build on the previous phase without rewrites; Backward compatibility maintained where applicable.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Clear Separation of Concerns
+Distinct boundaries between logic, storage, interface, and agents: Code organization must maintain clear separation between business logic, data storage, user interface, and AI agents.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Production-Minded Design
+Even early in-memory phase must follow production standards: Code quality, testing, and architecture must meet production-level standards from the start.
 
-### [PRINCIPLE_6_NAME]
+### Safe AI Integration
 
+AI features must be optional and safely sandboxed: AI integrations must not break core functionality when disabled; All AI interactions must be safely contained.
 
-[PRINCIPLE__DESCRIPTION]
+## Additional Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Technology Stack: Python console application for Phase I; In-memory data storage only (no files, no DB) for initial phase; Command-based or menu-based interface required.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Phase Requirements: Phase I constraints include in-memory storage only, console interaction, and complete CRUD operations for todos; Infrastructure changes must not alter core business logic.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Code Quality Standards: All code must be readable, well-structured, and commented; Each phase must build on the previous without rewrites; Backward compatibility must be maintained.
+
+Testing Requirements: Core functionality must be tested before adding new features; All changes must pass existing tests; Deterministic behavior required for console interactions.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+All development must adhere to the defined principles without exception: Code reviews must verify compliance with all principles; Any deviation requires explicit amendment to this constitution; Changes to core business logic require careful consideration of backward compatibility.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-04 | **Last Amended**: 2026-01-04
